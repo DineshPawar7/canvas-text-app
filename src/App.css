@@ -1,38 +1,123 @@
+body {
+  background-color: #e1e1e1;
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.canvas-wrapper {
+  margin: 0 auto;
+  max-width: calc(100% - 100px);
+  width: 30rem;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.canvas {
+  height: 33.3rem;
+  background-color: #d3d3d3;
+  margin: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-toolbar-wrapper {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.top-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.toolbar-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #575757b7;
+}
+
+.toolbar-button svg {
+  font-size: 24px;
+}
+
+.toolbar-button:hover {
+  color: #000000;
+}
+
+#more-features {
+margin-top: 50px; 
+  border-radius: 8px;
+}
+
+.add-text-button button {
+  background-color: #c0c0c092;
   color: white;
+  font-weight: bold;
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-text-button button:hover {
+  background-color: #3680a6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.font-family-dropdown {
+  position: relative;
+}
+
+.font-family-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.font-family-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 5px 0;
+  margin: 0;
+  display: none;
+}
+
+.font-family-list.visible {
+  display: block;
+}
+
+.font-family-list li {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.font-family-list li:hover {
+  background-color: #f1f1f1;
 }
